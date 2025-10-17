@@ -15,24 +15,24 @@ nextButton.addEventListener('click', function(){
 })
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const el = entry.target;
+// document.addEventListener("DOMContentLoaded", () => {
+//   const observer = new IntersectionObserver((entries) => {
+//     entries.forEach(entry => {
+//       const el = entry.target;
 
-      if (entry.isIntersecting) {
-        el.classList.add("visible");
-        el.classList.remove("exiting");
-      } else {
-        el.classList.remove("visible");
-        el.classList.add("exiting");
-      }
-    });
-  }, {
-    threshold: 0.3 // Adjust sensitivity
-  });
+//       if (entry.isIntersecting) {
+//         el.classList.add("visible");
+//         el.classList.remove("exiting");
+//       } else {
+//         el.classList.remove("visible");
+//         el.classList.add("exiting");
+//       }
+//     });
+//   }, {
+//     threshold: 0.3 // Adjust sensitivity
+//   });
 
-  document.querySelectorAll(".autoDisplay").forEach(el => {
-    observer.observe(el);
-  });
-});
+//   document.querySelectorAll(".autoDisplay").forEach(el => {
+//     observer.observe(el);
+//   });
+// });
