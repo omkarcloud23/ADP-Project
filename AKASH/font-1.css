@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Black Mustang';
+    src: url('fonts/Black Mustang.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sabery';
+    src: url('fonts/sabery-font.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DEATHCROW';
+    src: url('fonts/DEATHCROW.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Midnight Moon';
+    src: url('fonts/Midnight Moon - PERSONAL USE ONLY.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Transformers Movie';
+    src: url('fonts/Transformers Movie.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Power of Dragon';
+    src: url('fonts/PowerofDragon-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geizer';
+    src: url('fonts/Geizer.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'One Slice';
+    src: url('fonts/One Slice.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quick Spooky';
+    src: url('fonts/Quick Spooky.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
