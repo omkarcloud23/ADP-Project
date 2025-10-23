@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html , body{
+    height: 100%;
+    width: 100%;
+}
+/* font that i use in the project */
+@font-face {
+    font-family: 'MyFont';
+    src: url('./fonts/sabery-font.woff2') format('woff2');
+
+}
+
+/* nav section */
+
+.container{
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.nav-section{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    width: 100%;
+    height: 100px;
+    background-color: #0000005c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-top: 0px;
+    z-index: 999;
+    border-radius: 4px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+
+
+}
+.head-left h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 4px;
+    color: white;
+    font-size: 35px;
+    font-weight: 300;
+    height: auto;
+    width: auto;
+    margin-left: 20px;
+}
+.head-left p{
+    color: white;
+    opacity
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    letter-spacing: 3px;
+    letter-spacing: 4px;
+}
+.head-right a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-family: Helvetica, sans-serif;;
+    font-weight: 700;
+    margin-right: 30px;
+    background-color: white;
+    border-radius: 18px;
+    padding: 10px 15px;
+    transition: 0.3s ease-in-out;
+}
+.head-right a:hover{
+    background-color: black;
+    color: white;
+
+    
+}
+/* hero section */
+.hero-section{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+.hero-vid{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+.hero-vid video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+}
+
+/* scroll testing  */
+.hero-vid:scroll{
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+.hero-text{
+    position: absolute;
+    top: 200px;
+    left: 70px;
+    color: white;
+    text-align: left;
+    text-transform: uppercase;
+}
+.hero-text h1{
+    font-size: 10vw;
+    margin-bottom: 20px;
+    font-family: 'Midnight Moon', sans-serif;
+    letter-spacing: 6px;
+    font-weight: 400;
+}
+.hero-text p{
+    font-size: 2.5vw;
+    font-family: 'impact', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 200;
+}

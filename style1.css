@@ -1,0 +1,640 @@
+/* =========================
+   BODY STYLES
+   ========================= */
+body{
+    margin: 0; /* Remove default browser margin */
+    padding: 0; /* Remove default padding */
+    background-color: #000000; /* Black background for gaming theme */
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+/* =========================
+   CONTAINER
+   ========================= */
+.container{
+    font-family: Arial, Helvetica, sans-serif; /* Base font for the website */
+    color: white; /* Default text color */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    flex-direction: column; /* Stack elements vertically */
+    position: relative; /* Relative positioning for child absolute elements */
+}
+
+/* =========================
+   HEADER STYLES
+   ========================= */
+header{
+    position: absolute; /* Fixed at top */
+    top:0;
+    left:0;
+    right:0;
+    display: flex; /* Flex layout for header items */
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Space between left and right items */
+    padding : 10px 40px; /* Padding inside header */
+    z-index: 999; /* Ensure header is on top of other elements */
+    background-color: #4b4b4b5b; /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect behind header */
+}
+
+/* Header left side: logo + button */
+.head-left{
+    display: flex; /* Flexbox for logo and button alignment */
+    align-items: center; /* Center vertically */
+}
+
+/* Logo image size and margin */
+.head-left img{
+    height: 40px;
+    width: 40px;
+    margin-right: 20px; /* Space between logo and button */
+}
+
+/* Join button styles */
+.head-left button{
+    border: none; /* Remove default border */
+    padding: 10px 30px; /* Button padding */
+    border-radius: 20px; /* Rounded edges */
+    font-weight: 700; /* Bold text */
+    cursor: pointer; /* Pointer on hover */
+    transition: 0.3s; /* Smooth hover effect */
+}
+
+/* Button hover effect */
+.head-left button:hover{
+    opacity: 0.7; /* Slight fade on hover */
+}
+
+/* Header right navigation */
+.head-right{
+    display: flex; /* Horizontal links */
+}
+
+/* Each link style */
+.head-right a{
+    text-decoration: none; /* Remove underline */
+    padding-left:25px; /* Space between links */
+    color: white; /* White text */
+    font-size:15px; /* Font size */
+}
+
+/* =========================
+   HERO SECTION
+   ========================= */
+.hero-section{
+    position: relative; /* Container for absolute positioned elements */
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide overflow content */
+}
+
+/* Hero video container */
+.hero-vid{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Hero video itself */
+.hero-video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover entire container */
+}
+
+/* Overlay info on hero video */
+.hero-info{
+    z-index:1; /* On top of video */
+    position: absolute;
+    top:80px;
+    left:50px;
+    text-transform: uppercase; /* Capitalize text */
+}
+
+/* Hero title */
+.hero-info h1{
+    font-size: 120px; /* Big heading */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 900; /* Extra bold */
+    font-style: normal;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Hero subtitle */
+.hero-info p{
+    color: white;
+    max-width: 210px; /* Limit text width */
+}
+
+/* Hero button */
+.hero-info button{
+    background-color: #edff66; /* Neon yellow background */
+    border: 2px solid #edff66;
+    padding: 10px 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: black;
+    transition: 0.3s; /* Smooth hover transition */
+}
+
+/* Hover effect for hero button */
+.hero-info button:hover{
+    background-color: transparent;
+    color: white;
+    box-shadow: 0 0 15px #edff66; /* Glow effect */
+}
+
+/* Large decorative text in hero */
+.gaming-text{
+    font-size: 120px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin:0;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* =========================
+   NEXT BUTTON
+   ========================= */
+.next-btn{
+    width: 170px;
+    height: 170px;
+    background-color: #edff66; /* Neon yellow */
+    border-radius: 50%; /* Circle shape */
+    position: absolute;
+    left: 45%;
+    bottom: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0; /* Hidden initially */
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+/* Hover effect for next button */
+.next-btn:hover{
+    box-shadow: 0 0 30px #edff66; /* Glow effect */
+    width: 170px;
+    height: 170px;
+    opacity: 1;
+    box-shadow: 0 0 15px rgb(237, 255, 255, 0.616);
+}
+
+/* =========================
+   ABOUT SECTION
+   ========================= */
+.about-section{
+    wudth: 100%; /* Typo: should be 'width' */
+    height: 100%;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+/* Image container in about section */
+.image-box{
+    width: 360px;
+    height:510px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px; /* Rounded image container */
+}
+
+/* Image styling */
+.image-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover container */
+}
+
+/* About section heading */
+.about-section h1{
+    font-family: Impact , Haettenschweiler , 'Arial Narrow Bold',sans-serif;
+    font-weight: 900;
+    font-size: 100px;
+    max-width: 1150px;
+    text-align: center;
+    margin: 25px 0;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #4acfee , #53f8c9, #02d79a, #6070fd, #2a46ff, #0099ff, #4acfee); /* Gradient text */
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite; /* Animated gradient */
+}
+
+/* Gradient animation keyframes */
+@keyframes animate-gradient {
+    to{
+        background-position: 200%;
+    }
+}
+
+/* Small headings in about section */
+.about-section h4{
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+.about-section h5{
+    margin-top: 5px;
+    color: gray;
+    max-width: 425px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.stones-img{
+    position: absolute;
+    margin-top: 22%;
+    width: 500px;
+}
+/* =========================
+   INFO SECTION / CARDS
+   ========================= */
+.info-section{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 80%;
+    margin-top: 100px;
+}
+
+.info-section h3{
+    margin-bottom: 0;
+}
+.info-section p{
+    margin-top: 5px;
+    color: gray;
+    max-width: 400px;
+    line-height: 25px;
+}
+
+/* Card container grid */
+.info-cards{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap:20px;
+    width:100%;
+    height: 100%;
+    border: 0px solid gray;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+/* Individual hero card */
+.card{
+    position: relative;
+    width: auto;
+    height: 40vh;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid gray;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Card heading */
+.card h1{
+    position: absolute;
+    margin: 0;
+    top: 10px;
+    left: 5%;
+    font-size: 60px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    z-index:1;
+    background: linear-gradient(to right, #4acfee , #53f8c9, #02d79a, #6070fd, #2a46ff, #0099ff, #4acfee);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+    max-width: 400px;
+}
+
+/* Card description text */
+.card p{
+    position: absolute;
+    top: 80px;
+    left: 5%;
+    z-index: 1;
+    max-width: 250px;
+    color: lightgray;
+}
+
+/* Card video */
+.card video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Card button */
+.card button{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    padding: 10px 25px;
+    border: 1px solid gray;
+    background-color: #0f1217;
+    color: gray;
+    border-radius: 20px;
+    box-shadow: 0 0 5px lightgray;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Card hover effect */
+.card button:hover{
+    box-shadow: 0 0 15px lightgray;
+    opacity: 0.7px;
+}
+.card:hover{
+    box-shadow: 0 0 15px rgb(213, 213, 213);
+}
+
+/* Specific grid card spans */
+.card:nth-child(1){
+    grid-column: span 2;
+}
+.card:nth-child(2){
+    grid-row: span 2;
+    height: 83vh;
+}
+
+/* =========================
+   CONTACT SECTION
+   ========================= */
+.contact-section{
+    position: relative;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 100px;
+}
+
+/* Contact images */
+.contact-section .img1{
+    position: absolute;
+    top: 10%;
+    right: 100px;
+    height: 400px;
+    transition: 0.3s;
+    clip-path: polygon(25% 0%, 100% 0, 75% 100%, 0% 100%);
+}
+.contact-section .img2{
+    position: absolute;
+    left: 200px;
+    top: 10px;
+    height: 200px;
+    transition: 0.3s;
+    clip-path: polygon(50% 0%, 100% 47%, 82% 100%, 18% 100%, 0 46%);
+}
+.contact-section .img3{
+    position: absolute;
+    left: 15%;
+    bottom: 0%;
+    height: 150px;
+    width: 250px;
+    transition: 0.3s;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+/* hover effect on image */
+.contact-section .img1:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.contact-section .img2:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+.contact-section .img3:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+/* Contact text */
+.contact-section p{
+    margin-top: 100px;
+}
+.contact-section h1{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 70px;
+    max-width: 550px;
+    text-align: center;
+    background: linear-gradient(to right, #4acfee , #53f8c9, #02d79a, #6070fd, #2a46ff, #0099ff, #4acfee);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+}
+.contact-section button{
+    padding: 10px 25px;
+    border: 1px solid gray;
+    background-color: #0f1217;
+    color: gray;
+    border-radius: 20px;
+    box-shadow: 0 0 5px lightgray;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.contact-section button:hover{
+    box-shadow: 0 0 15px lightgray;
+    opacity: 0.7px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.footer{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(211, 211, 211, 0.088); /* Transparent background */
+    backdrop-filter: blur(10px); /* Blur behind footer */
+    height: 100px;
+}
+.footer p{
+    margin: 0 20px;
+}
+.footer ul{
+    display: flex;
+    list-style: none;
+    margin-right: 140px;
+}
+.footer a{
+    text-decoration: none;
+    color: white;
+    padding: 7px 7px;
+    border-radius: 50px;
+    border: 1px solid rgb(0, 125, 213);
+    transition: 0.3s;
+    margin: 0 10px;
+}
+
+/* =========================
+   ANIMATION CLASSES
+   ========================= */
+
+/* Auto blur effect for elements */
+.autoBlur{
+    animation: autoBlurAnimation linear both;
+    animation-timeline: view();
+}
+@keyframes autoBlurAnimation{
+    0%{
+        filter: blur(40px);
+    }
+    40%, 60%{
+        filter: blur(0);
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        filter: blur(40px);
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+}
+
+/* Full screen animation */
+.autoTakeFull{
+    animation: autoTakeFullAnimation both;
+    animation-timeline: view(70% 65%);
+}
+@keyframes autoTakeFullAnimation{
+    to{
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        margin-bottom: 100px;
+    }
+}
+
+/* Auto display animation */
+.autoDisplay{
+    animation: autoDisplayAnimation both;
+    animation-timeline: view(70% 5%);
+}
+@keyframes autoDisplayAnimation{
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    } 
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+
+
+/* to make mobile screen responsive site  */
+@media only screen and (max-width: 650px){
+    
+    header{
+        padding: 0 10px;
+    }
+    .head-left button{
+        display: none;
+    }
+    .head-right a{
+        font-size: 12px;
+        padding: 0 5px;
+    }
+    .hero-info{
+        left: 5%;
+    }
+    .hero-section h1{
+        font-size: 90px;
+    }
+    .next-btn{
+        left: 25%;
+        top: 40%;
+    }
+    .about-section{
+        margin: 0;
+    }
+    .about-section h1{
+        font-size: 50px;
+        margin-left: 4px;
+
+    }
+    .section-info h3{
+        font-size: 26px;
+        margin-left: 50px;
+    }
+    .section-info p{
+        font-size: 18px;
+        margin-left: 28px;
+    }
+    .image-box{
+        width: 300px;
+        height: 500px;
+    }
+    .about-section h4, .about-section h5{
+        max-width: 350px;
+        text-align: center;
+    }
+    .contact-section  .img1{
+        width: 120px;
+        height: 170px;
+        right: 0;
+        top: 100px;
+    }
+    .contact-section .img2{
+        top: 30px;
+        left: -40px;
+        width: 150px;
+        height: 120px;
+    }
+    .contact-section .img3{
+        left: -30px;
+        bottom: 0;
+        width: 150px;
+        height: 120px;
+    }
+    .contact-section h1{
+        font-size: 40px;
+        max-width: 250px;
+    }
+    .footer p{
+        display: none;
+
+    }
+    .footer ul{
+        margin-left: 50px;
+        border: none;
+        text-decoration: none;
+    }
+    .stones-img{
+        max-width: 450px;
+        margin-top: 300px;
+    }
+    .info-card{
+        max-width: 250px;
+    }
+}
