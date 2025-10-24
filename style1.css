@@ -35,6 +35,7 @@ header{
     z-index: 999; /* Ensure header is on top of other elements */
     background-color: #4b4b4b5b; /* Semi-transparent background */
     backdrop-filter: blur(10px); /* Blur effect behind header */
+    position: fixed; /* Fix header position on scroll */
 }
 
 /* Header left side: logo + button */
@@ -68,14 +69,27 @@ header{
 /* Header right navigation */
 .head-right{
     display: flex; /* Horizontal links */
+    
 }
 
 /* Each link style */
 .head-right a{
     text-decoration: none; /* Remove underline */
-    padding-left:25px; /* Space between links */
-    color: white; /* White text */
-    font-size:15px; /* Font size */
+    padding-left: 25px; /* Space between links */
+    color: black; /* Black text */
+    font-size: 15px; /* Font size */
+    background-color: #ffffff; /* White background */
+    border-radius: 18px; /* Rounded edges */
+    padding: 10px 15px; /* Padding inside link */   
+    transition: 0.3s; /* Smooth hover effect */
+    margin-right: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+/* head right links hover effect */
+.head-right a:hover{
+    background-color: #000000ff; /* Neon yellow background on hover */
+    color: white;/* White text on hover */
 }
 
 /* =========================
@@ -220,7 +234,6 @@ header{
     height: 100%;
     object-fit: cover; /* Cover container */
 }
-
 /* About section heading */
 .about-section h1{
     font-family: Impact , Haettenschweiler , 'Arial Narrow Bold',sans-serif;
@@ -326,7 +339,7 @@ header{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: animate-gradient 2.5s linear infinite;
-    max-width: 400px;
+    max-width: 1000px;
 }
 
 /* Card description text */
