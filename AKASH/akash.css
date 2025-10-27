@@ -1,0 +1,669 @@
+
+/* Reset and Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color:rgb(250, 232, 209);
+
+}
+
+/* ----------- */
+/* .hero-main{
+    background: linear-gradient(135deg, #0A1D37 0%, #1A1A1A 40%, #E50914 100%);
+
+} */
+/* Navbar */
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: fixed;
+    background-color: transparent;
+    backdrop-filter: blur(8px);
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.nav-left img.logo-img {
+    width: 180px;
+    height: auto;
+}
+
+.nav-right a {
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgba(101, 101, 101, 0.774);
+    letter-spacing: 3px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 200;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+}
+
+.nav-right a:hover {
+    background-color: #FCAB10;
+    color: #ff0000;
+    letter-spacing: 4px;
+}
+
+/* Hero Section */
+.hero-section {
+    margin-top: 100px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    align-items: center;
+    overflow: hidden;
+    display: flex;
+    overflow: hidden;
+}
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 28%;
+    rotate: calc(-90deg);
+    align-self: center;
+
+
+}
+
+.hero-heading {
+    font-family: 'Geizer', sans-serif;
+    font-size: 180px;
+    letter-spacing: 6px;
+    border-radius: 20px;
+    z-index: 67;
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(221, 4, 4);
+}
+
+/* Story Section */
+.story-section {
+    position: relative;
+    padding: 20px 50px;
+    text-align: center;
+}
+.story-section h1 {
+    font-family: 'Power of Dragon', sans-serif;
+    font-size: 156px;
+    margin-bottom: 30px;
+    color: rgb(116, 2, 2);
+    letter-spacing: 4px;
+
+}
+
+.story-info {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card-vid {
+    width: 250px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    rotate: -90deg;
+    margin-left: 300px;
+}
+
+.info {
+    position: absolute;
+    top: 32%;
+    left: 45%;
+    margin-top:100px;
+    text-align: left;
+}
+.info p {
+    /* padding-top: 100px; */
+    font-family: 'Power of Dragon', sans-serif;
+    max-width: 650px;
+    font-size: 30px;
+    color: black;
+    line-height: 1.6;
+}
+.info-section{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 80%;
+    margin-top: 100px;
+}
+
+.info-section h3{
+    margin-bottom: 0;
+}
+.info-section p{
+    margin-top: 5px;
+    color: gray;
+    max-width: 400px;
+    line-height: 25px;
+}
+
+/* Card container grid */
+.info-cards{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap:20px;
+    width:100%;
+    height: 100%;
+    border: 0px solid gray;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+/* Individual hero card */
+.card{
+    position: relative;
+    width: auto;
+    height: 40vh;
+    overflow: hidden;
+    border-radius: 20px;
+    /* border: 1px solid rgba(255, 0, 0, 0.06); */
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    opacity: 0.95;
+}
+
+
+/* Card description text */
+.card p{
+    font-family: 'Power of Dragon', sans-serif;
+    font-size: 25px;
+    position: absolute;
+    top: center;
+    left: center;
+    z-index: 1;
+    max-width: 1000px;
+    color: var(--text);
+    padding: 60px;
+    transition: 0.3s ease-in-out;
+}
+
+.card p:hover{
+       scale: 1.1;
+       color: #1900FF;
+}
+
+/* Specific grid card spans */
+.card:nth-child(1){
+    grid-column: span 2;
+}
+.card:nth-child(2){
+    grid-column: span 2;
+}
+.card:nth-child(3) {
+    grid-column: span 2;
+}
+.card:nth-child(4){
+    grid-column: span 2;
+}
+.card:nth-child(5){
+    grid-column: span 2;
+}
+
+
+
+/* Abilities section */
+.abilities-heading{
+    color: rgb(116, 2, 2);
+    text-align: center;
+    font-size: 160px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    font-family: 'Geizer', sans-serif;
+    letter-spacing: 4px;
+}
+.abilities-section{
+    padding: 100px 50px;
+    text-align: center;
+}
+.abilities-section h1{
+    font-size: 180px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-family: 'Power of Dragon', sans-serif;
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+.abilities-grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+}
+
+
+.elem {
+    height: 150px;
+    width: 100%;
+    position: relative;
+
+    border-bottom: 1px solid #38383864;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+}
+
+.elem h2 {
+    font-size: 3vw;
+    position: relative;
+    top: center;
+    left: 40%;
+    z-index: 9;
+
+}
+
+.elem .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(241, 206, 12, 0.95);
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.25s;
+}
+
+.elem:hover .overlay {
+    top: 0;
+}
+
+
+
+#fixed-image {
+    height: 30vw;
+    width: 24vw;
+    /* background-color: red; */
+    border-radius: 15px;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 25%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer-text p {
+    text-align: center;
+    padding: 10px;
+    font-family: 'One Slice', sans-serif;
+    font-size: 25px;
+    letter-spacing: 3px;
+    color: black;
+    text-transform: uppercase;
+}
+.footer-text h1{
+    text-align: center;
+    font-family: 'Geizer', sans-serif;
+    font-size: 40px;
+    color: red;
+    margin: 20px 100px;
+    letter-spacing: 4px;
+}
+#text {
+    text-align: center;
+    font-family: 'Geizer', sans-serif;
+    font-size: 20px;
+    color: #210c57;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+/* Auto display animation */
+.autoDisplay{
+    animation: autoDisplayAnimation both;
+    animation-timeline: view(70% 5%);
+}
+@keyframes autoDisplayAnimation{
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    } 
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+
+/* Full screen animation */
+.autoTakeFull{
+    animation: autoTakeFullAnimation both;
+    animation-timeline: view(70% 65%);
+}
+@keyframes autoTakeFullAnimation{
+    to{
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        margin-bottom: 100px;
+    }
+}
+
+
+
+
+/* loading ext animation  */
+
+/* PARTICLE EXPLOSION PRELOADER */
+
+    #preloader {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg,#071225 0%, var(--panel) 100%);
+      color: var(--text);
+      z-index: 9999;
+      flex-direction: column;
+      transition: opacity 400ms ease, visibility 400ms;
+    }
+    #preloader.hide {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .pre-word {
+      font-size: 1.6rem;
+      letter-spacing: 0.6px;
+      margin-bottom: 14px;
+      opacity: 1;
+      transition: opacity 250ms;
+      color: var(--text);
+    }
+    .pre-progress {
+      width: 60%;
+      max-width: 420px;
+      min-width: 220px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 6px;
+      overflow: hidden;
+      height: 10px;
+      margin-top: 6px;
+    }
+    .pre-progress > span {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg,var(--accent-neon),var(--accent-alert));
+      width: 0%;
+      transition: width 220ms ease;
+    }
+    .pre-percent {
+      margin-top: 8px;
+      font-size: 0.95rem;
+      opacity: 0.85;
+      color: var(--muted);
+    }
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+  .nav-bar { 
+    padding: 14px 24px; 
+ }
+  .nav-left img.logo-img { 
+    width: 150px;
+ }
+
+  .hero-heading h1 { 
+    font-size: 140px; 
+  }
+  .hero-img { 
+    width: 48%; 
+    margin-top: 100px; 
+    margin-left: 220px; 
+  }
+
+  .story-section h1 { 
+    font-size: 48px; 
+  }
+  .card h1 { 
+    font-size: 44px; 
+  }
+  .card p { 
+    font-size: 20px; 
+    padding: 40px; 
+  }
+  .info-cards { 
+    grid-template-columns: 1fr 1fr; 
+    gap: 18px; 
+  }
+
+  .abilities-grid { 
+    grid-template-columns: repeat(3, 1fr); 
+  }
+  .elem h2 { font-size: 2.6vw; }
+}
+
+@media (max-width: 900px) {
+  .nav-bar { 
+    padding: 12px 18px; 
+    backdrop-filter: blur(6px); 
+}
+  .nav-left img.logo-img { 
+    width: 130px;
+ }
+  .nav-right a { 
+    padding: 8px 12px; 
+    font-size: 12px; 
+    letter-spacing: 2px; 
+  }
+
+  /* Hero becomes more compact */
+  .hero-section { 
+    height: auto; 
+    padding: 80px 20px; 
+  }
+  .hero-heading { 
+    width: 95%; 
+    top: 45%; 
+    transform: translate(-50%,-45%); 
+  }
+  .hero-heading h1 { 
+    font-size: 100px; 
+  }
+  .hero-img { 
+    position: relative; 
+    width: 60%; 
+    margin: 20px auto 0; 
+    height: auto; 
+    z-index: 5; 
+    margin-left: 0; 
+    margin-top: 0; 
+  }
+
+  .hero-section p { 
+    font-size: 22px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    bottom: 20%; 
+  }
+
+  /* Cards stack into single column */
+  .info-cards { 
+    grid-template-columns: 1fr; 
+    gap: 16px; 
+  }
+  .card { 
+    height: auto; 
+    padding-bottom: 40px; 
+  }
+  .card h1 { 
+    font-size: 36px; 
+    padding-top: 12px; 
+    position: relative; 
+  }
+  .card p { 
+    font-size: 18px; 
+    padding: 20px; 
+    position: relative; 
+  }
+
+  /* reset grid-specific spans that break stacking */
+  .card:nth-child(1), .card:nth-child(2), .card:nth-child(5) { 
+    grid-column: auto; 
+    grid-row: auto; 
+    height: auto; 
+  }
+
+  .abilities-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 14px; 
+  }
+  .elem { 
+    height: 120px; 
+    padding: 0 3vw; 
+  }
+  .elem h2 { 
+    font-size: 5vw; 
+    left: 30%; 
+  }
+
+
+  /* fixed-image hide on medium/small */
+  #fixed-image { 
+    display: none; 
+}
+}
+
+@media (max-width: 600px) {
+  .nav-bar { 
+    padding: 10px 12px; 
+}
+  .nav-left img.logo-img { 
+    width: 110px; 
+}
+  /* hide links on very small screens (replace with hamburger in future) */
+  .nav-right { 
+    display: none;
+ }
+
+  /* Hero becomes stacked column */
+  .hero-heading { 
+    flex-direction: column; 
+    gap: 8px; 
+    width: 100%; 
+    transform: none; 
+    top: 30%; 
+    left: 50%; 
+  }
+  .hero-heading h1 { 
+    font-size: 56px; 
+    line-height: 1; 
+    text-align: center; 
+  }
+  .hero-img { 
+    width: 85%; 
+    margin: 12px auto 0; 
+    position: relative; 
+    height: auto; 
+  }
+
+  .hero-section p { 
+    font-size: 18px; 
+    bottom: auto; 
+    margin-top: 12px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+  }
+
+  .info-cards {
+    padding: 12px;
+    gap: 12px;
+  }
+  .card h1 {
+    font-size: 28px;
+  }
+  .card p {
+    font-size: 16px; padding: 16px;
+  }
+
+  .abilities-heading { 
+    font-size: 36px;
+    margin-top: 60px; 
+}
+  .abilities-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 12px;
+  }
+  .elem {
+    height: 110px; 
+    padding: 0 4vw;
+  }
+  .elem h2 { 
+    font-size: 6.5vw; 
+    left: 35%; 
+}
+
+  /* Preloader scale for small screens */
+  #preloader { 
+    padding: 18px 12px;
+ }
+  .pre-word { 
+    font-size: 1.2rem;
+ }
+  .pre-progress { 
+    width: 80%; 
+    min-width: 140px; 
+}
+  .pre-percent { 
+    font-size: 0.85rem; 
+}
+
+  /* ensure no horizontal overflow */
+  html, body { 
+    overflow-x: hidden; 
+}
+}
+
+/* optional: high-density and large-screen tweaks */
+@media (min-width: 1600px) {
+  .hero-heading h1 { 
+    font-size: 260px; 
+}
+  .hero-img { 
+    width: 45%; 
+    margin-left: 420px; 
+    margin-top: 160px; 
+  }
+  .info-cards { 
+    gap: 28px; 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
