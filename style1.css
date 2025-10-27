@@ -211,7 +211,7 @@ header{
    ABOUT SECTION
    ========================= */
 .about-section{
-    wudth: 100%; /* Typo: should be 'width' */
+    width: 100%; /* Typo: should be 'width' */
     height: 100%;
     margin-top: 200px;
     display: flex;

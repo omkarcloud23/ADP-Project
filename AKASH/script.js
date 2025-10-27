@@ -1,4 +1,4 @@
-  (function () {
+ (function () {
       const words = [
         'Loading assets',
         'Preparing interface',
