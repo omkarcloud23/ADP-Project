@@ -1,0 +1,342 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctor Strange — Fan Page (Pushkar Bagade)</title>
+
+  <!-- Fonts & icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    /* ===== GENERAL STYLES ===== */
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      position: relative;
+      height: 72vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      background: url('https://wallpaperswide.com/download/doctor_strange-wallpaper-1366x768.jpg') center top/cover no-repeat;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .hero h1 {
+      position: relative;
+      font-family: 'Cinzel', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      z-index: 2;
+      margin: 0;
+      color: #ffa200;
+    }
+
+    .hero p {
+      position: relative;
+      z-index: 2;
+      font-size: 1.1rem;
+      margin-top: 12px;
+      color: #ccc;
+    }
+
+    /* ===== CARDS SECTION ===== */
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: -60px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .card {
+      background: rgba(20, 20, 20, 0.95);
+      padding: 20px;
+      border-radius: 15px;
+      width: 260px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+      border: 2px solid transparent;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      border-color: #00ff7f;
+      box-shadow: 0 0 15px #00ff7f;
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #ffa200;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    /* ===== INFO SECTIONS ===== */
+    .info-section {
+      display: none;
+      max-width: 800px;
+      margin: 40px auto;
+      background: rgba(20, 20, 20, 0.9);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(255, 140, 0, 0.2);
+      animation: fade 0.4s ease;
+    }
+
+    .info-section.active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .info-section h3 {
+      color: #ffa200;
+      margin-bottom: 10px;
+    }
+
+    .info-section p {
+      color: #ccc;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .info-section button {
+      background: #ff7b00;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 15px;
+      color: #fff;
+      font-weight: bold;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .info-section button:hover {
+      background: #ffa200;
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      background: rgba(20, 20, 20, 0.95);
+      max-width: 900px;
+      margin: 40px auto;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(255, 140, 0, 0.3);
+      overflow: hidden;
+    }
+
+    .about img {
+      width: 300px;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+      border-right: 3px solid #ff7b00;
+    }
+
+    .about-content {
+      padding: 25px;
+      flex: 1;
+    }
+
+    .about-content h3 {
+      color: #ffa200;
+      margin-bottom: 10px;
+    }
+
+    .about-content p {
+      color: #ccc;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .about-content button {
+      background: #ff7b00;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .about-content button:hover {
+      background: #ffa200;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #aaa;
+      font-size: 0.9rem;
+      border-top: 1px solid #222;
+    }
+
+    .studio-tag {
+      background: #ff2a00;
+      color: #fff;
+      padding: 6px 16px;
+      border-radius: 12px;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    footer span {
+      color: #ff7b00;
+      font-weight: 600;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width: 768px) {
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .about {
+        flex-direction: column;
+      }
+
+      .about img {
+        border-right: none;
+        border-bottom: 3px solid #ff7b00;
+        width: 100%;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <h1>DOCTOR STRANGE</h1>
+    <p>The Sorcerer Supreme — Master of the Mystic Arts and Guardian of Reality</p>
+  </section>
+
+  <!-- ===== CARDS ===== -->
+  <div class="cards">
+    <div class="card" onclick="toggleSection('powers')">
+      <h3>Powers</h3>
+      <p>Arcane spells, portals, shields, and astral projection — the magic of the Mystic Arts.</p>
+    </div>
+    <div class="card" onclick="toggleSection('weapons')">
+      <h3>Weapons</h3>
+      <p>Ancient relics and artifacts that amplify his power — mystical and divine.</p>
+    </div>
+    <div class="card" onclick="toggleSection('actors')">
+      <h3>Actors</h3>
+      <p>The incredible cast bringing the Sorcerer Supreme to life on screen.</p>
+    </div>
+  </div>
+
+  <!-- ===== INFO SECTIONS ===== -->
+  <div id="powers" class="info-section">
+    <h3>Powers</h3>
+    <p>Doctor Strange commands the energy of the universe through the Mystic Arts. His abilities include teleportation, mirror dimension control, astral projection, and manipulation of time and reality. His magic stems from intense focus and ancient spells taught by The Ancient One.</p>
+    <button onclick="toggleSection('powers')">Close</button>
+  </div>
+
+  <div id="weapons" class="info-section">
+    <h3>Weapons</h3>
+    <p><strong>Eye of Agamotto:</strong> Grants him control over the Time Stone, allowing Strange to reverse or accelerate time events.</p>
+    <p><strong>Cloak of Levitation:</strong> A sentient relic that lets him fly and protects him in battle.</p>
+    <p><strong>Sling Ring:</strong> Enables instantaneous travel between dimensions and universes.</p>
+    <button onclick="toggleSection('weapons')">Close</button>
+  </div>
+
+  <div id="actors" class="info-section">
+    <h3>Actors</h3>
+    <p><strong>Benedict Cumberbatch</strong> masterfully portrays Doctor Strange, bringing intellect and mysticism together. Supporting characters include Wong (Benedict Wong), The Ancient One (Tilda Swinton), and Christine Palmer (Rachel McAdams).</p>
+    <button onclick="toggleSection('actors')">Close</button>
+  </div>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <div class="about">
+    <img src="https://i.pinimg.com/736x/5e/6a/01/5e6a01e41322b9454a88b9d135ec0b91.jpg" alt="Doctor Strange About">
+
+    <div class="about-content">
+      <h3>About Dr. Stephen Strange</h3>
+      <p><strong>Early Life & Tragedy:</strong> Stephen Strange was a world-renowned neurosurgeon, known for his precision and arrogance. His life took a devastating turn after a car accident severely damaged his hands, ending his surgical career.</p>
+      <p><strong>Journey to Kamar-Taj:</strong> Desperate for healing, Strange traveled to Nepal, where he met The Ancient One. She opened his eyes to the hidden world of mysticism and dimensions beyond reality.</p>
+      <p><strong>Mastering the Mystic Arts:</strong> Through rigorous training and an unmatched intellect, Strange learned the secrets of spells, relics, and cosmic energy. His determination transformed him from skeptic to sorcerer.</p>
+      <p><strong>The Sorcerer Supreme:</strong> After defending the Earth from countless threats — from Dormammu to multiversal chaos — Strange rose as the Sorcerer Supreme, protector of the Sanctum Sanctorum and the realms beyond.</p>
+      <button onclick="window.open('https://en.wikipedia.org/wiki/Doctor_Strange_(Marvel_Cinematic_Universe)', '_blank')">Learn More</button>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="studio-tag">MARVEL STUDIOS</div>
+    Made by <span>Pushkar Bagade</span> — PRN: 2125UDSM1026
+  </footer>
+
+  <script>
+    function toggleSection(id) {
+      const sections = document.querySelectorAll('.info-section');
+      sections.forEach(section => {
+        if (section.id === id) {
+          section.classList.toggle('active');
+        } else {
+          section.classList.remove('active');
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
